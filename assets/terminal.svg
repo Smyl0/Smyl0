@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="330" viewBox="0 0 860 330" role="img" aria-label="Terminal animada de Steven Pallo">
+  <title>steven@uta: ~</title>
+  <defs>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <linearGradient id="border" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#22D3EE" stop-opacity=".6"/>
+      <stop offset=".5" stop-color="#30363D"/>
+      <stop offset="1" stop-color="#8B5CF6" stop-opacity=".6"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    text { font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', Consolas, 'Liberation Mono', 'Courier New', monospace; font-size: 15px; }
+    .user { fill: #3FB950; font-weight: 700; }
+    .path { fill: #58A6FF; font-weight: 700; }
+    .txt  { fill: #E6EDF3; }
+    .mute { fill: #8B949E; }
+    .name { fill: #22D3EE; font-weight: 700; }
+    .sep  { fill: #484F58; }
+    .ok   { fill: #3FB950; }
+    .title { fill: #8B949E; font-size: 13px; }
+    .hide { opacity: 0; }
+
+    .bar-fill { transform-box: fill-box; transform-origin: left center; transform: scaleX(0); }
+
+    @keyframes on    { to { opacity: 1; } }
+    @keyframes off   { to { opacity: 0; } }
+    @keyframes fade  { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+    @keyframes type1 { to { transform: translateX(54px); } }
+    @keyframes type2 { to { transform: translateX(117px); } }
+    @keyframes type3 { to { transform: translateX(180px); } }
+    @keyframes fill  { to { transform: scaleX(1); } }
+    @keyframes blink { 50% { opacity: 0; } }
+  </style>
+
+  <!-- Ventana -->
+  <rect x="10" y="10" width="840" height="310" rx="14" fill="#0D1117" stroke="url(#border)" stroke-width="1.5"/>
+  <path d="M10 50V24a14 14 0 0 1 14-14h812a14 14 0 0 1 14 14v26z" fill="#161B22"/>
+  <line x1="10" y1="50" x2="850" y2="50" stroke="#30363D"/>
+  <circle cx="36" cy="30" r="6.5" fill="#FF5F57"/>
+  <circle cx="58" cy="30" r="6.5" fill="#FEBC2E"/>
+  <circle cx="80" cy="30" r="6.5" fill="#28C840"/>
+  <text x="430" y="35" text-anchor="middle" class="title">steven@uta: ~ — bash</text>
+
+  <!-- 1. whoami -->
+  <g class="hide" style="animation: on .01s .4s forwards">
+    <text x="34" y="88" textLength="180" lengthAdjust="spacingAndGlyphs"><tspan class="user">steven@uta</tspan><tspan class="txt">:</tspan><tspan class="path">~</tspan><tspan class="txt">$ whoami</tspan></text>
+    <rect x="160" y="70" width="60" height="26" fill="#0D1117" style="animation: type1 .6s steps(6) .7s forwards"/>
+  </g>
+  <text x="34" y="118" class="hide" style="animation: fade .45s ease-out 1.6s forwards"><tspan class="name">Steven Pallo</tspan><tspan class="mute"> — Estudiante de Ingeniería en Software · UTA (4.º semestre)</tspan></text>
+
+  <!-- 2. cat stack.txt -->
+  <g class="hide" style="animation: on .01s 2.2s forwards">
+    <text x="34" y="148" textLength="243" lengthAdjust="spacingAndGlyphs"><tspan class="user">steven@uta</tspan><tspan class="txt">:</tspan><tspan class="path">~</tspan><tspan class="txt">$ cat stack.txt</tspan></text>
+    <rect x="160" y="130" width="123" height="26" fill="#0D1117" style="animation: type2 1.3s steps(13) 2.5s forwards"/>
+  </g>
+  <text x="34" y="178" class="hide" style="animation: fade .45s ease-out 4.1s forwards"><tspan fill="#F89820">Java</tspan><tspan class="sep"> · </tspan><tspan fill="#A179DC">C#</tspan><tspan class="sep"> · </tspan><tspan fill="#9B87F5">.NET</tspan><tspan class="sep"> · </tspan><tspan fill="#61DAFB">React</tspan><tspan class="sep"> · </tspan><tspan fill="#A5ADE0">PHP</tspan><tspan class="sep"> · </tspan><tspan fill="#FFD43B">Python</tspan><tspan class="sep"> · </tspan><tspan fill="#6CA6E0">C++</tspan><tspan class="sep"> · </tspan><tspan fill="#F29111">SQL</tspan><tspan class="sep"> · </tspan><tspan fill="#E6EDF3">Linux</tspan><tspan class="sep"> · </tspan><tspan fill="#F05032">Git</tspan></text>
+
+  <!-- 3. ./compilar_futuro.sh -->
+  <g class="hide" style="animation: on .01s 4.7s forwards">
+    <text x="34" y="208" textLength="306" lengthAdjust="spacingAndGlyphs"><tspan class="user">steven@uta</tspan><tspan class="txt">:</tspan><tspan class="path">~</tspan><tspan class="txt">$ ./compilar_futuro.sh</tspan></text>
+    <rect x="160" y="190" width="186" height="26" fill="#0D1117" style="animation: type3 2s steps(20) 5s forwards"/>
+  </g>
+  <g class="hide" style="animation: on .01s 7.3s forwards">
+    <text x="34" y="238" class="mute">Compilando</text>
+    <rect x="150" y="227" width="520" height="13" rx="6.5" fill="#21262D"/>
+    <rect x="150" y="227" width="520" height="13" rx="6.5" fill="url(#accent)" class="bar-fill" style="animation: fill 2.2s cubic-bezier(.65,0,.35,1) 7.4s forwards"/>
+  </g>
+  <text x="686" y="238" class="mute hide" style="animation: on .01s 7.3s forwards, off .01s 7.95s forwards">0%</text>
+  <text x="686" y="238" class="mute hide" style="animation: on .01s 7.95s forwards, off .01s 8.5s forwards">25%</text>
+  <text x="686" y="238" class="mute hide" style="animation: on .01s 8.5s forwards, off .01s 9.05s forwards">50%</text>
+  <text x="686" y="238" class="mute hide" style="animation: on .01s 9.05s forwards, off .01s 9.6s forwards">75%</text>
+  <text x="686" y="238" class="ok hide" style="animation: on .01s 9.6s forwards">100%</text>
+  <text x="34" y="268" class="ok hide" style="animation: fade .45s ease-out 9.9s forwards">✔ Build exitoso: siempre aprendiendo, siempre construyendo 🚀</text>
+
+  <!-- 4. prompt final -->
+  <g class="hide" style="animation: on .01s 10.4s forwards">
+    <text x="34" y="298" textLength="117" lengthAdjust="spacingAndGlyphs"><tspan class="user">steven@uta</tspan><tspan class="txt">:</tspan><tspan class="path">~</tspan><tspan class="txt">$</tspan></text>
+  </g>
+  <rect x="160" y="284" width="9" height="18" fill="#22D3EE" class="hide" style="animation: blink 1s steps(1) 10.4s infinite"/>
+</svg>
